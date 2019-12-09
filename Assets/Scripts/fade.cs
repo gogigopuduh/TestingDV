@@ -35,10 +35,15 @@ public class fade : MonoBehaviour
 
             GetComponent<Renderer>().material.color = c;
             ft = ft - 0.01f;
-            yield return new WaitForSeconds(0.5f); ;
+            yield return new WaitForSeconds(0.01f); ;
         }
     }
 
+
+    private void Start()
+    {
+        StartCoroutine(FadeCorrutina());
+    }
     void Update()
     {
 

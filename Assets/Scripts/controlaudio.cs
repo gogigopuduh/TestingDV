@@ -11,5 +11,13 @@ public class controlaudio : MonoBehaviour
     {
         audio.clip = biblioteca[0];
         audio.Play();
+
+        StartCoroutine(Mute());
+    }
+
+    IEnumerator Mute()
+    {
+        yield return new WaitForSeconds(3.5f);
+        audio.mute = true;
     }
 }

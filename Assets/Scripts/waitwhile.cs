@@ -14,13 +14,13 @@ public class waitwhile : MonoBehaviour
     IEnumerator EsperaMientras()
     {
         Debug.Log("esperando a que se cumpla la condicion");
-        yield return new WaitWhile(() => frame < 10);
-        Debug.Log("termino!!! y espero a que terminara de contar 10 frames");
+        yield return new WaitWhile(() => frame < 100);
+        Debug.Log("termino!!! y espero a que terminara de contar 100 frames");
     }
 
     void Update()
     {
-        if (frame <= 10)
+        if (frame <= 100)
         {
             Debug.Log("Frame: " + frame);
             frame++;

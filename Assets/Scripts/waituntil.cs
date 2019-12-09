@@ -14,13 +14,13 @@ public class waituntil : MonoBehaviour
     IEnumerator Example()
     {
         Debug.Log("esperando hasta que se cumpla la condicion");
-        yield return new WaitUntil(() => frame >= 10);
-        Debug.Log("Termino!!! se cumplio la condicion de frames = 10");
+        yield return new WaitUntil(() => frame >= 100);
+        Debug.Log("Termino!!! se cumplio la condicion de frames = 100");
     }
 
     void Update()
     {
-        if (frame <= 10)
+        if (frame <= 100)
         {
             Debug.Log("Frame: " + frame);
             frame++;

@@ -16,8 +16,11 @@ public class corrutina : MonoBehaviour
     IEnumerator CorrutinaTest()
     {
         Debug.Log("hola soy un corrutina");
-        
-        yield return 0;// puede ser null o 0 es decir, no nos interesa que devuelva algo
+
+        // yield return 0;// puede ser null o 0 es decir, no nos interesa que devuelva algo
+        yield return new WaitForSeconds(3);
+        Debug.Log("pasaron 3 seg");
+
     }
 
     private void Start()
